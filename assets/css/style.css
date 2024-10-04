@@ -1,0 +1,61 @@
+:root {
+    --main-color: #FC4100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+}
+
+footer p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+.btn {
+    transition: all .1s ease-in;
+}
+
+.btn-main {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn-second {
+    background-color: #FC4100;
+    color: #fff;
+}
+
+.btn-second:hover {
+    background-color: #FC4100;
+    color: #fff;
+    opacity: 0.8!important;
+}
+
+.btn-main:hover {
+    color: var(--main-color)!important;
+    background-color: #fff;
+}
+
+.bg-main {
+    background: var(--main-color)!important;
+}
+
+

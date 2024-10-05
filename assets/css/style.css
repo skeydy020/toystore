@@ -58,10 +58,20 @@ a {
     color: var(--main-color)!important;
 }
 
-.btn-float-right {
-    position: absolute;
-    top: 0;
-    right: 0!important;
+.btn-border {
+    color: #000;
+    border: 2px solid var(--main-color);
+    border-radius: 24px;
+    background: #fff;
+}
+
+.btn-border:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+
+.btn-nohover:hover {
+    color: var(--main-color);
 }
 
 .btn-float-right:hover {
@@ -90,7 +100,7 @@ a {
     position: absolute;
     top: 12px;
     right: 12px;
-    font-size: 14px;
+    font-size: 1rem;
     background-color: #FF6500;
     color: #fff;
     border-radius: 6px;
@@ -98,16 +108,28 @@ a {
 }
 
 .card {
-    height: 420px;
+    min-height: 420px;
+}
+
+.card-custom {
+    border:none;
 }
 
 .card-title {
     font-weight: normal!important;
     height: 44px;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.1rem;
     display: -webkit-box;           /* Necessary for line clamping */
     -webkit-line-clamp: 2;          /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;   /* Specify vertical orientation */
+    overflow: hidden;               /* Hide any overflow text */
+    text-overflow: ellipsis;        /* Add ellipsis at the end of overflowing text */
+}
+
+.card-text {
+    display: -webkit-box;           /* Necessary for line clamping */
+    -webkit-line-clamp: 3;          /* Limit text to 2 lines */
     -webkit-box-orient: vertical;   /* Specify vertical orientation */
     overflow: hidden;               /* Hide any overflow text */
     text-overflow: ellipsis;        /* Add ellipsis at the end of overflowing text */
@@ -129,6 +151,72 @@ a {
 .btn-favorite {
     padding-right: 0!important;
 }
+
+.card-no-border {
+    border: none!important;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.search-bar {
+    border-radius: 20px;
+    border: none;
+}
+
+a:hover {
+    transition: all .1s ease-in;
+    color: var(--main-color);
+}
+
+.border-main {
+    border-color: var(--main-color)!important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: .7rem;
+    }
+    .card-title {
+        height: 3rem;
+    }
+
+    .card {
+        min-height: 100%;
+    }
+
+    .card-body {
+        padding: 12px 12px !important;
+    }
+
+    .card-img-top {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .nav-item:hover {
+        background-color: #fff!important;
+       
+    }
+
+    .nav-item:hover a {
+        color: var(--main-color)!important;
+    }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
 
 
 

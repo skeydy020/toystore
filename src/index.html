@@ -18,164 +18,574 @@
 <body>
     <!-- Header -->
     <header class="bg-main text-main py-2">
-        <div class="container d-flex justify-content-between align-items-center mt-4 mb-3">
-            <img class="me-5" src="//www.mykingdom.com.vn/cdn/shop/files/image_47.svg?v=1683551202&width=600" alt="">
-            <form class="d-flex flex-fill me-5">
-                <input class="form-control mx-2" type="search" placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..."
-                    aria-label="Search">
+        <div class="container d-flex justify-content-between align-items-center my-2">
+            <!-- Logo -->
+            <a href="./index.html"><img class="me-5 img-fluid w-md-25"
+                src="../assets/img/logo.png" alt=""></a>
+
+            <!-- Search Form (hidden on mobile) -->
+            <form class="d-none d-md-flex flex-fill me-5">
+                <input class="form-control mx-2 search-bar py-2 px-4 fs-5" type="search"
+                    placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
                 <button class="btn text-white btn-main"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
 
-            <div class="">
-                <a href="#" class="text-white btn btn-main me-3">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="ms-2">Tài khoản</span>
+            <!-- Account and Cart (Icons only on mobile) -->
+            <div class="d-flex">
+                <a href="#" class="text-white btn btn-main me-2">
+                    <i class=" fa-solid fa-user"></i>
+                    <span class="d-none d-md-inline ms-2 fs-5">Tài khoản</span>
                 </a>
                 <a href="#" class="text-white btn btn-main">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="ms-2">Giỏ hàng</span>
+                    <i class=" fa-solid fa-cart-shopping"></i>
+                    <span class="d-none d-md-inline ms-2 fs-5">Giỏ hàng</span>
                 </a>
             </div>
         </div>
-        <!-- Nav -->
+
+        <!-- Mobile Search Form (visible on mobile) -->
+        <form class="d-flex d-md-none px-3 mb-3 align-items-center">
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="btn btn-main d-md-none me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fs-2 fa-solid fa-bars"></i>
+            </button>
+            <input class="form-control me-2 search-bar py-3 fs-5" type="search"
+                placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
+            <button class="btn text-white btn-main"><i class="fs-3 fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Nav (Desktop and Mobile) -->
         <nav class="border-top pt-3">
-            <ul class="nav container d-flex justify-content-between align-items-center">
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white">Trang chủ</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white">Sản phẩm</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white">Khuyến mại</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white">Thành viên</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white">Cẩm nang</a></li>
+            <!-- Desktop Menu -->
+            <ul class="nav container d-none d-md-flex justify-content-between align-items-center">
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
+                </li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a></li>
             </ul>
+
+            <!-- Mobile Menu (Collapsible) -->
+            <div class="collapse d-md-none" id="mobileMenu">
+                <ul class="nav flex-column text-center">
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
+
 
     <!-- Banner Section -->
     <section class="text-center px-5 py-3">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="//www.mykingdom.com.vn/cdn/shop/files/1280_x_496.png?v=1727339466&width=1500" class="d-block w-100 rounded-4" alt="Slide 1">
+                    <img src="//www.mykingdom.com.vn/cdn/shop/files/1280_x_496.png?v=1727339466&width=1500"
+                        class="d-block w-100 rounded-4" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="//www.mykingdom.com.vn/cdn/shop/files/CTKM_thang_MKD.jpg?v=1727680412&width=1500" class="d-block w-100 rounded-4" alt="Slide 2">
+                    <img src="//www.mykingdom.com.vn/cdn/shop/files/CTKM_thang_MKD.jpg?v=1727680412&width=1500"
+                        class="d-block w-100 rounded-4" alt="Slide 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="//www.mykingdom.com.vn/cdn/shop/files/1280_x_496.png?v=1727339466&width=1500" class="d-block w-100 rounded-4" alt="Slide 3">
+                    <img src="//www.mykingdom.com.vn/cdn/shop/files/1280_x_496.png?v=1727339466&width=1500"
+                        class="d-block w-100 rounded-4" alt="Slide 3">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </section>
-    
 
-
-
-    <!-- Product Section -->
-    <section class="py-5">
-        <div class="container position-relative mt-5">
-            <h1 class="mb-5 capitalize text-second">Sản phẩm nổi bật</h1>
-            <div class="row row-cols-1 row-cols-md-4 g-4">
+    <!-- Top Product Section -->
+    <section class="py-md-4 py-2">
+        <div class="container position-relative mt-md-5 mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
+                <h1 class="capitalize text-second">Top sản phẩm bán chạy</h1>
+                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 g-4">
                 <div class="col">
                     <a href="./single-product.html">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
-                        <span class="discount-badge">-20%</span>
-                        <div class="card-body">
-                            <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
-                            <div class="price mb-2 mt-3 text-start">
-                                <span class="price-regular">249.000 Đ</span>
-                                <span class="price-onsale fs-5">187.000 Đ</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào giỏ hàng</a>
-                                <button class="btn btn-favorite"><i class="fa-regular fa-heart text-main fs-3"></i></button>
+                        <div class="card h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-xe-canh-sat-tu-dong-vecto-vt9033ck_1.jpg?v=1725424811&width=500"
+                                class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col">
                     <a href="./single-product.html">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
-                        <span class="discount-badge">-20%</span>
-                        <div class="card-body">
-                            <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
-                            <div class="price mb-2 mt-3 text-start">
-                                <span class="price-regular">249.000 Đ</span>
-                                <span class="price-onsale fs-5">187.000 Đ</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào giỏ hàng</a>
-                                <button class="btn btn-favorite"><i class="fa-regular fa-heart text-main fs-3"></i></button>
+                        <div class="card h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-xe-canh-sat-tu-dong-vecto-vt9033ck_1.jpg?v=1725424811&width=500"
+                                class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col">
                     <a href="./single-product.html">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
-                        <span class="discount-badge">-20%</span>
-                        <div class="card-body">
-                            <h5 class="card-title two-line-text-overflow">Trứng Slime sưu tập ấp nở khủng long JurassicWorld Hatchling TOY MONSTER JW-HC-14CDU</h5>
-                            <div class="price mb-2 mt-3 text-start">
-                                <span class="price-regular">249.000 Đ</span>
-                                <span class="price-onsale fs-5">187.000 Đ</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào giỏ hàng</a>
-                                <button class="btn btn-favorite"><i class="fa-regular fa-heart text-main fs-3"></i></button>
+                        <div class="card h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/10280_6f82d206-8386-47ba-b499-310819e0f918.jpg?v=1725527326&width=500"
+                                class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Trứng Slime sưu tập ấp nở khủng long
+                                    JurassicWorld Hatchling TOY MONSTER JW-HC-14CDU</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
                 <div class="col">
                     <a href="./single-product.html">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
-                        <span class="discount-badge">-20%</span>
-                        <div class="card-body">
-                            <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
-                            <div class="price mb-2 mt-3 text-start">
-                                <span class="price-regular">249.000 Đ</span>
-                                <span class="price-onsale fs-5">187.000 Đ</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào giỏ hàng</a>
-                                <button class="btn btn-favorite"><i class="fa-regular fa-heart text-main fs-3"></i></button>
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>
             </div>
-            <button class="btn text-main fs-3 fw-bold btn-float-right">Xem thêm &#8594;</button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-main text-white text-center py-3">
-        <p>&copy; 2024 Toy Store - All rights reserved.</p>
-    </footer>
+    <!-- Product Section -->
+    <section class="py-md-4 py-2 mt-3">
+        <div class="container position-relative mt-md-5 mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
+                <h1 class="capitalize text-second">Sản phẩm nổi bật</h1>
+                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 g-4">
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Trứng Slime sưu tập ấp nở khủng long
+                                    JurassicWorld Hatchling TOY MONSTER JW-HC-14CDU</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                            <span class="discount-badge">-20%</span>
+                            <div class="card-body">
+                                <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                <div class="price mb-2 mt-3 text-start">
+                                    <span class="price-regular">249.000 Đ</span>
+                                    <span class="price-onsale fs-5">187.000 Đ</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                        giỏ hàng</a>
+                                    <button class="btn btn-favorite"><i
+                                            class="fa-regular fa-heart text-main fs-3"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Category Section -->
+    <section class="py-md-4 py-2">
+        <div class="container position-relative mt-md-5 mt-5">
+            <h1 class="mb-md-5 mb-3 capitalize text-second">Danh mục sản phẩm theo mùa</h1>
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="d-flex flex-column h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
+                                class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
+                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="d-flex flex-column h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
+                                class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
+                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="d-flex flex-column h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
+                                class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
+                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="./single-product.html">
+                        <div class="d-flex flex-column h-100">
+                            <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
+                                class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
+                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Brand Section -->
+    <section class="py-md-4 py-2 mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3 ">
+                <h1 class="capitalize text-second">Thương hiệu nổi bật</h1>
+                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 mb-4">
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+            </div>
+            <div class="row row-cols-2 row-cols-md-4 d-none d-md-flex ">
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+                <div class="col">
+                    <img class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="my-5">
+        <div class="container py-5">
+            <div class="row mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
+                    <h1 class="capitalize text-second">Cẩm nang</h1>
+                    <button class="btn text-main fs-3 fw-bold btn-nohover">Xem Tất cả &#8594;</button>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4"> <!-- Adjust column classes and add g-4 for consistent spacing -->
+                <div class="col">
+                    <div class="shadow p-3 bg-body rounded">
+                        <div class="card-custom">
+                            <a href="single-post.html">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                            </a>
+                            <div class="card-body">
+                                <a href="single-post.html">
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                </a>
+                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="shadow p-3 bg-body rounded">
+                        <div class="card-custom">
+                            <a href="single-post.html">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                            </a>
+                            <div class="card-body">
+                                <a href="single-post.html">
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                </a>
+                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="shadow p-3 bg-body rounded">
+                        <div class="card-custom">
+                            <a href="single-post.html">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                            </a>
+                            <div class="card-body">
+                                <a href="single-post.html">
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                </a>
+                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    
+    <section id="insta" class="my-5">
+        <div class="row g-0 py-5">
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta1.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta2.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta3.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta4.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta5.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+            <div class="col text-center position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
+                </div>
+                <a href="#">
+                    <img src="../assets/img/insta/insta6.jpg" alt="insta-img" class="img-fluid rounded-3">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="border-top border-5 border-main mt-5 bg-second ">
+        <div class="container py-5 mt-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="//www.mykingdom.com.vn/cdn/shop/files/image_47.svg?v=1683551202&width=600" alt="logo">
+                    <p class="mt-3">Theo dõi chúng tôi trên</p>
+                    <ul class="list-unstyled mt-3 d-flex">
+                        <li><a href="#" class=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fab fa-pinterest"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fab fa-instagram"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-main">Điều hướng</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li class="my-2"><a href="#">Trang chủ</a></li>
+                        <li class="my-2"><a href="#">Sản phẩm</a></li>
+                        <li class="my-2"><a href="#">Khuyến mãi</a></li>
+                        <li class="my-2"><a href="#">Thành viên</a></li>
+                        <li class="my-2"><a href="#">Cẩm nang</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-main">Hỗ trợ</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li class="my-2"><a href="#">Chính sách bảo mật</a></li>
+                        <li class="my-2"><a href="#">Bảo hành đổi trả hàng</a></li>
+                        <li class="my-2"><a href="#">Chính sách thanh toán</a></li>
+                        <li class="my-2"><a href="#">Câu hỏi thường gặp</a></li>
+                        <li class="my-2"><a href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-main">Đăng ký</h3>
+                    <p class=" mt-3">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
+                    <form class="d-flex">
+                        <input type="text" class="form-control me-2" placeholder="Email của bạn" />
+                        <button class="btn btn-main" type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 
     <script src="./script.js"></script>
 </body>

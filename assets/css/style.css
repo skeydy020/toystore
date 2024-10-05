@@ -2,12 +2,6 @@
     --main-color: #FC4100;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,15 +11,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .card-img-top {
-    height: 150px;
+    height: 250px;
     object-fit: cover;
 }
 
-footer p {
-    margin: 0;
-}
-
 a {
+    color: #000;
     text-decoration: none!important;
 }
 
@@ -33,29 +24,112 @@ a {
     transition: all .1s ease-in;
 }
 
-.btn-main {
-    background-color: var(--main-color);
-    color: white;
-}
-
-.btn-second {
-    background-color: #FC4100;
+.btn-main,
+.bg-main,
+.btn-main-hover {
+    background-color: var(--main-color)!important;
     color: #fff;
 }
 
-.btn-second:hover {
-    background-color: #FC4100;
+
+.text-main {
+    color: var(--main-color);
+}
+
+.text-second {
+    color: #006769;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.btn-main-hover:hover {
     color: #fff;
     opacity: 0.8!important;
 }
 
 .btn-main:hover {
+    background-color: #fff!important;
     color: var(--main-color)!important;
-    background-color: #fff;
 }
 
-.bg-main {
-    background: var(--main-color)!important;
+.btn-float-right {
+    position: absolute;
+    top: 0;
+    right: 0!important;
 }
+
+.btn-float-right:hover {
+    color: var(--main-color);
+}
+
+/* Custom CSS for forcing left-to-right slide animation */
+.carousel-item-next,
+.carousel-item-start {
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item-prev,
+.carousel-item-end {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item.active {
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 14px;
+    background-color: #FF6500;
+    color: #fff;
+    border-radius: 6px;
+    padding: 4px 12px;
+}
+
+.card {
+    height: 420px;
+}
+
+.card-title {
+    font-weight: normal!important;
+    height: 44px;
+    text-align: left;
+    font-size: 18px;
+    display: -webkit-box;           /* Necessary for line clamping */
+    -webkit-line-clamp: 2;          /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;   /* Specify vertical orientation */
+    overflow: hidden;               /* Hide any overflow text */
+    text-overflow: ellipsis;        /* Add ellipsis at the end of overflowing text */
+}
+
+.card-body {
+    padding: 16px 24px !important;
+}
+
+.price-regular {
+    color: #636363;
+    text-decoration: line-through;
+}
+
+.price-onsale {
+    color: var(--main-color);
+}
+
+.btn-favorite {
+    padding-right: 0!important;
+}
+
+
 
 

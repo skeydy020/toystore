@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/product-list.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <input type="text" placeholder="Tìm kiếm" class="form-control" />
+                    </div>
+                </div>
+        
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Danh mục
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active"><i class="fa fa-angle-right"></i> Siêu anh hùng</a>
+                                <ul class="nav flex-column ms-3">
+                                    <li class="nav-item"><a href="#" class="nav-link active">- Anime</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">- Marvel</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Bags & Purses</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Beauty</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Coat & Jacket</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Jeans</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Jewellery</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Electronics</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Sports</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Technology</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Watches</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Price Range
+                    </div>
+                    <div class="card-body">
+                        <div id="slider-range" class="slider"></div>
+                        <div class="slider-info">
+                            <span id="slider-range-amount"></span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Filter
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label>Brand</label>
+                                <select class="form-select">
+                                    <option>Wallmart</option>
+                                    <option>Catseye</option>
+                                    <option>Moonsoon</option>
+                                    <option>Textmart</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label>Color</label>
+                                <select class="form-select">
+                                    <option>White</option>
+                                    <option>Black</option>
+                                    <option>Red</option>
+                                    <option>Green</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label>Type</label>
+                                <select class="form-select">
+                                    <option>Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra Large</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Filter</button>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Best Seller
+                    </div>
+                    <div class="card-body">
+                        <div class="best-seller">
+                            <article class="d-flex mb-3">
+                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" class="img-fluid" alt="Item One" /></a>
+                                <div>
+                                    <a href="#" class="fw-bold">Item One Title</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </article>
+                            <article class="d-flex mb-3">
+                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/A2BE2/000000" class="img-fluid" alt="Item Two" /></a>
+                                <div>
+                                    <a href="#" class="fw-bold">Item Two Title</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </article>
+                            <article class="d-flex mb-3">
+                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/6495ED/000000" class="img-fluid" alt="Item Three" /></a>
+                                <div>
+                                    <a href="#" class="fw-bold">Item Three Title</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-end">
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">»</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row product-list">
+                    <!-- Repeat this block for each product -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="pro-img-box position-relative">
+                                <img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" class="card-img-top" alt="" />
+                                <a href="#" class="position-absolute top-0 end-0 m-2"><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><a href="#" class="text-decoration-none">Leopard Shirt Dress</a></h5>
+                                <p class="price">$300.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for more products... -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

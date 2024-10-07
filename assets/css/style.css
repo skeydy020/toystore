@@ -8,6 +8,7 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-weight: bold;
+    margin: 0!important;
 }
 
 .card-img-top {
@@ -72,6 +73,10 @@ a {
 
 .btn-nohover:hover {
     color: var(--main-color);
+}
+
+.btn-nohover {
+    padding: 0!important;
 }
 
 .btn-float-right:hover {
@@ -172,51 +177,6 @@ a:hover {
     border-color: var(--main-color)!important;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    * {
-        font-size: .7rem;
-    }
-    .card-title {
-        height: 3rem;
-    }
-
-    .card {
-        min-height: 100%;
-    }
-
-    .card-body {
-        padding: 12px 12px !important;
-    }
-
-    .card-img-top {
-        height: 150px;
-        object-fit: cover;
-    }
-
-    .nav-item:hover {
-        background-color: #fff!important;
-       
-    }
-
-    .nav-item:hover a {
-        color: var(--main-color)!important;
-    }
-
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
 
 
 

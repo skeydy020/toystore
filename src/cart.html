@@ -17,31 +17,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header class="bg-main text-main py-2">
         <div class="container d-flex justify-content-between align-items-center my-2">
             <!-- Logo -->
-            <a href="./index.html"><img class="me-5 img-fluid w-md-25" src="../assets/img/logo.png" alt=""></a>
+            <a href="./index.html">
+                <img class="img-fluid py-md-4 w-md-75 py-3 w-50" src="../assets/img/logo.png" alt="">
+            </a>
 
             <!-- Search Form (hidden on mobile) -->
             <form class="d-none d-md-flex flex-fill me-5">
-                <input class="form-control mx-2 search-bar py-2 px-4 fs-5" type="search"
+                <input class="form-control mx-2 search-bar py-2 px-4 fs-5 fs-md-6" type="search"
                     placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
                 <button class="btn text-white btn-main"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
 
             <!-- Account and Cart (Icons only on mobile) -->
             <div class="d-flex">
-                <a href="#" class="text-white btn btn-main me-2">
-                    <i class=" fa-solid fa-user"></i>
-                    <span class="d-none d-md-inline ms-2 fs-5">Tài khoản</span>
+                <a href="#" class="text-white btn btn-main me-2 fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6  fa-solid fa-user"></i>
+                    <span class="d-none d-md-inline ms-2">Tài khoản</span>
                 </a>
-                <a href="#" class="text-white btn btn-main">
-                    <i class=" fa-solid fa-cart-shopping"></i>
-                    <span class="d-none d-md-inline ms-2 fs-5">Giỏ hàng</span>
+                <a href="#" class="text-white btn btn-main fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6 fa-solid fa-cart-shopping"></i>
+                    <span class="d-none d-md-inline ms-2 ">Giỏ hàng</span>
                 </a>
             </div>
         </div>
@@ -63,18 +67,17 @@
         <nav class="border-top pt-3">
             <!-- Desktop Menu -->
             <ul class="nav container d-none d-md-flex justify-content-between align-items-center">
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a></li>
                 <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a></li>
                 <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
-                </li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a></li>
                 <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a></li>
             </ul>
 
             <!-- Mobile Menu (Collapsible) -->
             <div class="collapse d-md-none" id="mobileMenu">
                 <ul class="nav flex-column text-center">
-                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a>
+                    <li class="nav-item h4 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a>
                     </li>
                     <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a>
                     </li>
@@ -88,9 +91,11 @@
             </div>
         </nav>
     </header>
-    <div class="container mt-5">
+
+    <!-- Body section -->
+    <section class="container mt-5">
         <div class="row">
-            <div class="col-xl-8">
+            <div class="col-xl-7">
                 <div class="card-cart border shadow-none">
                     <div class="card-body">
                         <div class="d-flex align-items-start border-bottom pb-3">
@@ -100,27 +105,27 @@
                             </div>
                             <div class="flex-grow-1 align-self-center overflow-hidden">
                                 <div>
-                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark capitalize">Ván
+                                    <h5 class="text-truncate"><a href="#" class="text-dark capitalize fs-5">Ván
                                             trượt Tech Deck</a></h5>
-                                    <p class="text-muted mb-0">
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star-half text-warning"></i>
+                                    <p class="mt-2 mb-0">
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star-half text-warning"></i>
                                     </p>
                                 </div>
                             </div>
                             <div class="flex-shrink-0 ms-2">
                                 <ul class="list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-trash-can-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-trash-can-outline"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-heart-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-heart-outline"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -128,33 +133,34 @@
                         </div>
 
                         <div>
-                            <div class="row">
+                            <div class="row row-cols-2 row-cols-md-3">
                                 <div class="col-md-4">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Giá</p>
-                                        <div class="price mb-2 mt-3 text-start">
-                                            <span class="price-regular">249.000 Đ</span>
-                                            <span class="price-onsale fs-5">187.000 Đ</span>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 me-3 fs-5">Giá</p>
+                                        <div class="price mb-md-2 mt-md-3 m-0 text-start">
+                                            <span class="price-regular fs-6">249,000 Đ</span>
+                                            <span class="price-onsale fs-5">187,000 Đ</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Số lượng</p>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3">Số lượng</p>
                                         <div class="d-inline-flex align-items-center">
-                                            <button class="btn btn-outline-secondary btn-sm decrement"
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm decrement"
                                                 type="button">-</button>
-                                            <span class="mx-2 quantityDisplay">1</span>
-                                            <button class="btn btn-outline-secondary btn-sm increment"
+                                            <span class="mx-2 quantityDisplay fs-5">1</span>
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm increment"
                                                 type="button">+</button>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Tổng tiền</p>
-                                        <h5 class="total-price"></h5>
+                                <div class="col d-md-none"></div>
+                                <div class="col col-md-3">
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3 position-relative" style="top:1px;">Tổng tiền</p>
+                                        <h5 class="total-price mb-md-2 mt-md-3"></h5>
                                     </div>
                                 </div>
                             </div>
@@ -163,37 +169,36 @@
                     </div>
                 </div>
                 <!-- end card-cart -->
-
                 <div class="card-cart border shadow-none">
                     <div class="card-body">
-
                         <div class="d-flex align-items-start border-bottom pb-3">
                             <div class="me-4">
-                                <img src="https://www.bootdey.com/image/380x380/FF00FF/000000" alt=""
+                                <img src="https://www.bootdey.com/image/380x380/008B8B/000000" alt=""
                                     class="avatar-lg rounded">
                             </div>
                             <div class="flex-grow-1 align-self-center overflow-hidden">
                                 <div>
-                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark capitalize">Ván
+                                    <h5 class="text-truncate"><a href="#" class="text-dark capitalize fs-5">Ván
                                             trượt Tech Deck</a></h5>
-                                    <p class="text-muted mb-0">
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
+                                    <p class="mt-2 mb-0">
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star-half text-warning"></i>
                                     </p>
                                 </div>
                             </div>
                             <div class="flex-shrink-0 ms-2">
                                 <ul class="list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-trash-can-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-trash-can-outline"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-heart-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-heart-outline"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -201,33 +206,34 @@
                         </div>
 
                         <div>
-                            <div class="row">
+                            <div class="row row-cols-2 row-cols-md-3">
                                 <div class="col-md-4">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Giá</p>
-                                        <div class="price mb-2 mt-3 text-start">
-                                            <span class="price-regular">249.000 Đ</span>
-                                            <span class="price-onsale fs-5">187.000 Đ</span>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 me-3 fs-5">Giá</p>
+                                        <div class="price mb-md-2 mt-md-3 m-0 text-start">
+                                            <span class="price-regular fs-6">249,000 Đ</span>
+                                            <span class="price-onsale fs-5">187,000 Đ</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Số lượng</p>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3">Số lượng</p>
                                         <div class="d-inline-flex align-items-center">
-                                            <button class="btn btn-outline-secondary btn-sm decrement"
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm decrement"
                                                 type="button">-</button>
-                                            <span class="mx-2 quantityDisplay">1</span>
-                                            <button class="btn btn-outline-secondary btn-sm increment"
+                                            <span class="mx-2 quantityDisplay fs-5">1</span>
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm increment"
                                                 type="button">+</button>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Tổng tiền</p>
-                                        <h5 class="total-price"></h5>
+                                <div class="col d-md-none"></div>
+                                <div class="col col-md-3">
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3 position-relative" style="top:1px;">Tổng tiền</p>
+                                        <h5 class="total-price mb-md-2 mt-md-3"></h5>
                                     </div>
                                 </div>
                             </div>
@@ -236,36 +242,36 @@
                     </div>
                 </div>
                 <!-- end card-cart -->
-
                 <div class="card-cart border shadow-none">
                     <div class="card-body">
-
                         <div class="d-flex align-items-start border-bottom pb-3">
                             <div class="me-4">
-                                <img src="https://www.bootdey.com/image/380x380/FF8C00/000000" alt=""
+                                <img src="https://www.bootdey.com/image/380x380/008B8B/000000" alt=""
                                     class="avatar-lg rounded">
                             </div>
                             <div class="flex-grow-1 align-self-center overflow-hidden">
                                 <div>
-                                    <h5 class="text-truncate font-size-18"><a href="#" class="text-dark capitalize">Ván
+                                    <h5 class="text-truncate"><a href="#" class="text-dark capitalize fs-5">Ván
                                             trượt Tech Deck</a></h5>
-                                    <p class="text-muted mb-0">
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
+                                    <p class="mt-2 mb-0">
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star text-warning"></i>
+                                        <i class="bx fs-6 bxs-star-half text-warning"></i>
                                     </p>
                                 </div>
                             </div>
                             <div class="flex-shrink-0 ms-2">
                                 <ul class="list-inline mb-0">
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-trash-can-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-trash-can-outline"></i>
                                         </a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="#" class="text-muted px-1">
-                                            <i class="mdi fs-5 mdi-heart-outline"></i>
+                                        <a href="#" class="px-1">
+                                            <i class="mdi fs-3 fs-md-4 mdi-heart-outline"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -273,33 +279,34 @@
                         </div>
 
                         <div>
-                            <div class="row">
+                            <div class="row row-cols-2 row-cols-md-3">
                                 <div class="col-md-4">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Giá</p>
-                                        <div class="price mb-2 mt-3 text-start">
-                                            <span class="price-regular">249.000 Đ</span>
-                                            <span class="price-onsale fs-5">187.000 Đ</span>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 me-3 fs-5">Giá</p>
+                                        <div class="price mb-md-2 mt-md-3 m-0 text-start">
+                                            <span class="price-regular fs-6">249,000 Đ</span>
+                                            <span class="price-onsale fs-5">187,000 Đ</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Số lượng</p>
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3">Số lượng</p>
                                         <div class="d-inline-flex align-items-center">
-                                            <button class="btn btn-outline-secondary btn-sm decrement"
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm decrement"
                                                 type="button">-</button>
-                                            <span class="mx-2 quantityDisplay">1</span>
-                                            <button class="btn btn-outline-secondary btn-sm increment"
+                                            <span class="mx-2 quantityDisplay fs-5">1</span>
+                                            <button class="btn py-1 px-2 text-main btn-outline-secondary btn-sm increment"
                                                 type="button">+</button>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="mt-3">
-                                        <p class="text-muted mb-2">Tổng tiền</p>
-                                        <h5 class="total-price"></h5>
+                                <div class="col d-md-none"></div>
+                                <div class="col col-md-3">
+                                    <div class="mt-3 d-flex d-md-block align-items-center">
+                                        <p class="mb-md-2 m-0 fs-5 me-3 position-relative" style="top:1px;">Tổng tiền</p>
+                                        <h5 class="total-price mb-md-2 mt-md-3"></h5>
                                     </div>
                                 </div>
                             </div>
@@ -310,12 +317,12 @@
                 <!-- end card-cart -->
             </div>
 
-            <div class="col-xl-4">
+            <div class="col-xl-5">
                 <div class="mt-5 mt-lg-0">
                     <div class="card-cart border shadow-none">
-                        <div class="card-header bg-transparent border-bottom py-3 px-4">
-                            <h5 class="fs-5 text-main mb-0">Thông tin thanh toán <span class="float-end">#MN0124</span>
-                            </h5>
+                        <div class="card-header border-bottom py-3 px-4 d-flex align-items-center justify-content-between">
+                            <h5 class="fs-4 text-main mb-0">Thông tin thanh toán</h5>
+                            <span class="fs-6 text-main">#MN0124</span>
                         </div>
                         <div class="card-body p-4 pt-2">
 
@@ -323,22 +330,22 @@
                                 <table class="table mb-0">
                                     <tbody>
                                         <tr>
-                                            <td>Tổng tiền :</td>
-                                            <td class="text-end">$ 780</td>
+                                            <td class="fs-5">Tổng tiền :</td>
+                                            <td class="fs-5 text-end">1,203,000 Đ</td>
                                         </tr>
                                         <tr>
-                                            <td>Giảm giá : </td>
-                                            <td class="text-end">- $ 78</td>
+                                            <td class="fs-5">Giảm giá : </td>
+                                            <td class="fs-5 text-end">- 32,000 Đ</td>
                                         </tr>
                                         <tr>
-                                            <td>Phí vận chuyển :</td>
-                                            <td class="text-end">$ 25</td>
+                                            <td class="fs-5">Phí vận chuyển :</td>
+                                            <td class="fs-5 text-end">25,000 Đ</td>
                                         </tr>
                                         <tr class="bg-light">
-                                            <th>Tổng tiền thanh toán :</th>
+                                            <th class="fs-5">Tổng tiền thanh toán :</th>
                                             <td class="text-end">
-                                                <span class="fw-bold">
-                                                    $ 745.2
+                                                <span class="fs-5 fw-bold">
+                                                    1,212,000 Đ
                                                 </span>
                                             </td>
                                         </tr>
@@ -350,8 +357,8 @@
                     </div>
                     <div class="text-center mt-2 mt-sm-0">
                         <a href="" class="btn btn-main-hover">
-                            <i class="mdi fs-5 mdi-cart-outline me-1"></i>
-                            Đặt mua
+                            <i class="mdi fs-4 mdi-cart-outline me-1"></i>
+                            <span class="fs-5">Đặt mua</span>
                         </a>
                     </div>
                 </div>
@@ -359,46 +366,47 @@
         </div>
         <!-- end row -->
 
-    </div>
+    </section>
+
     <!-- Footer -->
     <footer class="border-top border-5 border-main mt-5 bg-second ">
-        <div class="container py-5 mt-5">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="//www.mykingdom.com.vn/cdn/shop/files/image_47.svg?v=1683551202&width=600" alt="logo">
-                    <p class="mt-3">Theo dõi chúng tôi trên</p>
-                    <ul class="list-unstyled mt-3 d-flex">
-                        <li><a href="#" class=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-twitter"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-pinterest"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-instagram"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-youtube"></i></a></li>
+        <div class="container py-3 py-md-5 mt-3 mt-md-5">
+            <div class="row row-cols-1 row-cols-md-4 text-center text-md-start">
+                <div class="col">
+                    <img class="img-fluid w-50 w-md-75 mx-auto" src="../assets/img/logo.png" alt="logo">
+                    <p class="mt-3 fs-5">Theo dõi chúng tôi trên</p>
+                    <ul class="list-unstyled mt-3 d-flex justify-content-center justify-content-md-start">
+                        <li class=""><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-facebook-f"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-twitter"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-pinterest"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-instagram"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <h3 class="text-main">Điều hướng</h3>
-                    <ul class="list-unstyled mt-3">
-                        <li class="my-2"><a href="#">Trang chủ</a></li>
-                        <li class="my-2"><a href="#">Sản phẩm</a></li>
-                        <li class="my-2"><a href="#">Khuyến mãi</a></li>
-                        <li class="my-2"><a href="#">Thành viên</a></li>
-                        <li class="my-2"><a href="#">Cẩm nang</a></li>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="./index.html">Trang chủ</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Sản phẩm</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Khuyến mãi</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Thành viên</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Cẩm nang</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <h3 class="text-main">Hỗ trợ</h3>
-                    <ul class="list-unstyled mt-3">
-                        <li class="my-2"><a href="#">Chính sách bảo mật</a></li>
-                        <li class="my-2"><a href="#">Bảo hành đổi trả hàng</a></li>
-                        <li class="my-2"><a href="#">Chính sách thanh toán</a></li>
-                        <li class="my-2"><a href="#">Câu hỏi thường gặp</a></li>
-                        <li class="my-2"><a href="#">Điều khoản điều kiện</a></li>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách bảo mật</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Bảo hành đổi trả hàng</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách thanh toán</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Câu hỏi thường gặp</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Điều khoản điều kiện</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h3 class="text-main">Đăng ký</h3>
-                    <p class=" mt-3">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
-                    <form class="d-flex">
+                    <p class="mt-2 fs-6">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
+                    <form class="d-flex px-3 px-md-0">
                         <input type="text" class="form-control me-2" placeholder="Email của bạn" />
                         <button class="btn btn-main" type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
@@ -406,6 +414,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 

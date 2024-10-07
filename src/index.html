@@ -13,6 +13,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
 
 <body>
@@ -20,25 +21,26 @@
     <header class="bg-main text-main py-2">
         <div class="container d-flex justify-content-between align-items-center my-2">
             <!-- Logo -->
-            <a href="./index.html"><img class="me-5 img-fluid w-md-25"
-                src="../assets/img/logo.png" alt=""></a>
+            <a href="./index.html">
+                <img class="img-fluid py-md-4 w-md-75 py-3 w-50" src="../assets/img/logo.png" alt="">
+            </a>
 
             <!-- Search Form (hidden on mobile) -->
             <form class="d-none d-md-flex flex-fill me-5">
-                <input class="form-control mx-2 search-bar py-2 px-4 fs-5" type="search"
+                <input class="form-control mx-2 search-bar py-2 px-4 fs-5 fs-md-6" type="search"
                     placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
                 <button class="btn text-white btn-main"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
 
             <!-- Account and Cart (Icons only on mobile) -->
             <div class="d-flex">
-                <a href="#" class="text-white btn btn-main me-2">
-                    <i class=" fa-solid fa-user"></i>
-                    <span class="d-none d-md-inline ms-2 fs-5">Tài khoản</span>
+                <a href="#" class="text-white btn btn-main me-2 fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6  fa-solid fa-user"></i>
+                    <span class="d-none d-md-inline ms-2">Tài khoản</span>
                 </a>
-                <a href="#" class="text-white btn btn-main">
-                    <i class=" fa-solid fa-cart-shopping"></i>
-                    <span class="d-none d-md-inline ms-2 fs-5">Giỏ hàng</span>
+                <a href="./cart.html" class="text-white btn btn-main fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6 fa-solid fa-cart-shopping"></i>
+                    <span class="d-none d-md-inline ms-2 ">Giỏ hàng</span>
                 </a>
             </div>
         </div>
@@ -60,20 +62,19 @@
         <nav class="border-top pt-3">
             <!-- Desktop Menu -->
             <ul class="nav container d-none d-md-flex justify-content-between align-items-center">
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a></li>
                 <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a></li>
-                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
-                </li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a></li>
                 <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a></li>
             </ul>
 
             <!-- Mobile Menu (Collapsible) -->
             <div class="collapse d-md-none" id="mobileMenu">
                 <ul class="nav flex-column text-center">
-                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Trang chủ</a>
+                    <li class="nav-item h4 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a>
                     </li>
-                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Sản phẩm</a>
+                    <li class="nav-item h4 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a>
                     </li>
                     <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a>
                     </li>
@@ -85,7 +86,6 @@
             </div>
         </nav>
     </header>
-
 
     <!-- Banner Section -->
     <section class="text-center px-5 py-3">
@@ -129,8 +129,8 @@
     <section class="py-md-4 py-2">
         <div class="container position-relative mt-md-5 mt-5">
             <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
-                <h1 class="capitalize text-second">Top sản phẩm bán chạy</h1>
-                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+                <h1 class="capitalize text-second fs-3 fs-md-1">Top sản phẩm bán chạy</h1>
+                <button class="btn text-main fs-4 fw-bold btn-nohover">Xem thêm &#8594;</button>
             </div>
             <div class="row row-cols-2 row-cols-md-4 g-4">
                 <div class="col">
@@ -191,7 +191,8 @@
                                     <span class="price-onsale fs-5">187.000 Đ</span>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <a href="./cart.html" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                    <a href="./cart.html"
+                                        class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
                                         giỏ hàng</a>
                                     <button class="btn btn-favorite"><i
                                             class="fa-regular fa-heart text-main fs-3"></i></button>
@@ -229,8 +230,8 @@
     <section class="py-md-4 py-2 mt-3">
         <div class="container position-relative mt-md-5 mt-5">
             <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
-                <h1 class="capitalize text-second">Sản phẩm nổi bật</h1>
-                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+                <h1 class="capitalize text-second fs-3 fs-md-1">Sản phẩm nổi bật</h1>
+                <button class="btn text-main fs-4 fw-bold btn-nohover">Xem thêm &#8594;</button>
             </div>
             <div class="row row-cols-2 row-cols-md-4 g-4">
                 <div class="col">
@@ -325,14 +326,14 @@
     <!-- Category Section -->
     <section class="py-md-4 py-2">
         <div class="container position-relative mt-md-5 mt-5">
-            <h1 class="mb-md-5 mb-3 capitalize text-second">Danh mục sản phẩm theo mùa</h1>
+            <h1 class="mb-md-5 mb-3 capitalize text-second fs-3 fs-md-1">Danh mục sản phẩm theo mùa</h1>
             <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <div class="col">
                     <a href="./single-product.html">
                         <div class="d-flex flex-column h-100">
                             <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
                                 class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
-                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <h3 class="capitalize py-3 text-center fs-5 fs-md-4">Balo, túi đeo, vali</h3>
                             <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
                         </div>
                     </a>
@@ -342,7 +343,7 @@
                         <div class="d-flex flex-column h-100">
                             <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
                                 class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
-                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <h3 class="capitalize py-3 text-center fs-5 fs-md-4">Balo, túi đeo, vali</h3>
                             <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
                         </div>
                     </a>
@@ -352,7 +353,7 @@
                         <div class="d-flex flex-column h-100">
                             <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
                                 class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
-                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <h3 class="capitalize py-3 text-center fs-5 fs-md-4">Balo, túi đeo, vali</h3>
                             <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
                         </div>
                     </a>
@@ -362,7 +363,7 @@
                         <div class="d-flex flex-column h-100">
                             <img src="https://www.mykingdom.com.vn/cdn/shop/files/4._Banner_balo_vali_-_296x368px_296x.jpg?v=1721184582"
                                 class="card-no-border img-fluid" alt="Balo, túi đeo, vali">
-                            <h3 class="capitalize py-3 text-center">Balo, túi đeo, vali</h3>
+                            <h3 class="capitalize py-3 text-center fs-5 fs-md-4">Balo, túi đeo, vali</h3>
                             <button class="btn btn-border align-self-center fw-bold">Xem thêm</button>
                         </div>
                     </a>
@@ -371,75 +372,103 @@
         </div>
     </section>
 
-
     <!-- Brand Section -->
     <section class="py-md-4 py-2 mt-5">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3 ">
-                <h1 class="capitalize text-second">Thương hiệu nổi bật</h1>
-                <button class="btn text-main fs-3 fw-bold btn-nohover">Xem thêm &#8594;</button>
+            <div class="d-flex justify-content-between align-items-center mb-md-5 mb-4 ">
+                <h1 class="capitalize text-second fs-3 fs-md-1">Thương hiệu nổi bật</h1>
+                <button class="btn text-main fs-4 fw-bold btn-nohover">Xem thêm &#8594;</button>
             </div>
             <div class="row row-cols-2 row-cols-md-4 mb-4">
-                <div class="col">
-                    <img class="img-fluid"
+                <div class="col mb-4">
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
+                </div>
+                <div class="col mb-4">
+                    <a href="">
+                        <img 
+                        class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
                 <div class="col">
-                    <img class="img-fluid"
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
                 <div class="col">
-                    <img class="img-fluid"
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
-                </div>
-                <div class="col">
-                    <img class="img-fluid"
-                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
             </div>
-            <div class="row row-cols-2 row-cols-md-4 d-none d-md-flex ">
-                <div class="col">
-                    <img class="img-fluid"
+            <div class="row row-cols-2 row-cols-md-4 mb-4 d-none d-md-flex">
+                <div class="col mb-4">
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
+                </div>
+                <div class="col mb-4">
+                    <a href="">
+                        <img 
+                        class="img-fluid"
+                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
                 <div class="col">
-                    <img class="img-fluid"
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
                 <div class="col">
-                    <img class="img-fluid"
+                    <a href="">
+                        <img 
+                        class="img-fluid"
                         src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
-                </div>
-                <div class="col">
-                    <img class="img-fluid"
-                        src="https://www.mykingdom.com.vn/cdn/shop/files/RESIZE_LOGO-01_260x.jpg?v=1712300444" alt="">
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
-    <section id="blogs" class="my-5">
+    <section id="blogs" class="">
         <div class="container py-5">
-            <div class="row mt-4">
+            <div class="row">
                 <div class="d-flex justify-content-between align-items-center mb-md-5 mb-3">
-                    <h1 class="capitalize text-second">Cẩm nang</h1>
-                    <button class="btn text-main fs-3 fw-bold btn-nohover">Xem Tất cả &#8594;</button>
+                    <h1 class="capitalize text-second fs-3 fs-md-1">Cẩm nang</h1>
+                    <button class="btn text-main fs-4 fs-md-3 fw-bold btn-nohover">Xem Tất cả &#8594;</button>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4"> <!-- Adjust column classes and add g-4 for consistent spacing -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+                <!-- Adjust column classes and add g-4 for consistent spacing -->
                 <div class="col">
                     <div class="shadow p-3 bg-body rounded">
                         <div class="card-custom">
                             <a href="single-post.html">
-                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100"
+                                    class="img-fluid rounded-4" alt="image">
                             </a>
                             <div class="card-body">
                                 <a href="single-post.html">
-                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ
+                                        năng</h5>
                                 </a>
-                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
-                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                                <p class="card-text fs-6">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán
+                                    học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html"
+                                    class="blog-read text-main fw-bold text-decoration-underline fs-5 fs-md-6">Đọc tiếp</a>
                             </div>
                         </div>
                     </div>
@@ -448,14 +477,18 @@
                     <div class="shadow p-3 bg-body rounded">
                         <div class="card-custom">
                             <a href="single-post.html">
-                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100"
+                                    class="img-fluid rounded-4" alt="image">
                             </a>
                             <div class="card-body">
                                 <a href="single-post.html">
-                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ
+                                        năng</h5>
                                 </a>
-                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
-                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                                <p class="card-text fs-6">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán
+                                    học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html"
+                                    class="blog-read text-main fw-bold text-decoration-underline fs-5 fs-md-6">Đọc tiếp</a>
                             </div>
                         </div>
                     </div>
@@ -464,26 +497,30 @@
                     <div class="shadow p-3 bg-body rounded">
                         <div class="card-custom">
                             <a href="single-post.html">
-                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100" class="img-fluid rounded-4" alt="image">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/articles/steam-robotics-va-stem-robotics_thumbnail.png?v=1727721387&width=1100"
+                                    class="img-fluid rounded-4" alt="image">
                             </a>
                             <div class="card-body">
                                 <a href="single-post.html">
-                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ năng</h5>
+                                    <h5 class="pt-4 pb-3 m-0">Lập trình ROBOTICS – Cánh cửa mở rộng tư duy logic và kỹ
+                                        năng</h5>
                                 </a>
-                                <p class="card-text">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
-                                <a href="single-post.html" class="blog-read text-main fw-bold text-decoration-underline">Đọc tiếp</a>
+                                <p class="card-text fs-6">Giáo dục STEM, tập trung vào Khoa học, Công nghệ, Kỹ thuật và Toán
+                                    học, đã trở thành nền tảng của các chương trình giáo dục hiện đại...</p>
+                                <a href="single-post.html"
+                                    class="blog-read text-main fw-bold text-decoration-underline fs-5 fs-md-6">Đọc tiếp</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
-    
-    <section id="insta" class="my-5">
-        <div class="row g-0 py-5">
+    <!-- Insta section -->
+    <section id="insta" class="my-3 my-md-5">
+        <div class="row row-cols-3 row-cols-md-6 g-0 py-5">
             <div class="col text-center position-relative">
                 <div class="position-absolute top-50 start-50 translate-middle">
                     <iconify-icon class="text-white" icon="la:instagram"></iconify-icon>
@@ -534,47 +571,46 @@
             </div>
         </div>
     </section>
-    
 
     <!-- Footer -->
     <footer class="border-top border-5 border-main mt-5 bg-second ">
-        <div class="container py-5 mt-5">
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="//www.mykingdom.com.vn/cdn/shop/files/image_47.svg?v=1683551202&width=600" alt="logo">
-                    <p class="mt-3">Theo dõi chúng tôi trên</p>
-                    <ul class="list-unstyled mt-3 d-flex">
-                        <li><a href="#" class=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-twitter"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-pinterest"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-instagram"></i></a></li>
-                        <li class="ms-3"><a href="#" class=""><i class="fab fa-youtube"></i></a></li>
+        <div class="container py-3 py-md-5 mt-3 mt-md-5">
+            <div class="row row-cols-1 row-cols-md-4 text-center text-md-start">
+                <div class="col">
+                    <img class="img-fluid w-50 w-md-75 mx-auto" src="../assets/img/logo.png" alt="logo">
+                    <p class="mt-3 fs-5">Theo dõi chúng tôi trên</p>
+                    <ul class="list-unstyled mt-3 d-flex justify-content-center justify-content-md-start">
+                        <li class=""><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-facebook-f"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-twitter"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-pinterest"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-instagram"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <h3 class="text-main">Điều hướng</h3>
-                    <ul class="list-unstyled mt-3">
-                        <li class="my-2"><a href="#">Trang chủ</a></li>
-                        <li class="my-2"><a href="#">Sản phẩm</a></li>
-                        <li class="my-2"><a href="#">Khuyến mãi</a></li>
-                        <li class="my-2"><a href="#">Thành viên</a></li>
-                        <li class="my-2"><a href="#">Cẩm nang</a></li>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="./index.html">Trang chủ</a></li>
+                        <li class="my-2"><a class="fs-6" href="./product-list.html">Sản phẩm</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Khuyến mãi</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Thành viên</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Cẩm nang</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col">
                     <h3 class="text-main">Hỗ trợ</h3>
-                    <ul class="list-unstyled mt-3">
-                        <li class="my-2"><a href="#">Chính sách bảo mật</a></li>
-                        <li class="my-2"><a href="#">Bảo hành đổi trả hàng</a></li>
-                        <li class="my-2"><a href="#">Chính sách thanh toán</a></li>
-                        <li class="my-2"><a href="#">Câu hỏi thường gặp</a></li>
-                        <li class="my-2"><a href="#">Điều khoản điều kiện</a></li>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách bảo mật</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Bảo hành đổi trả hàng</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách thanh toán</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Câu hỏi thường gặp</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Điều khoản điều kiện</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h3 class="text-main">Đăng ký</h3>
-                    <p class=" mt-3">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
-                    <form class="d-flex">
+                    <p class="mt-2 fs-6">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
+                    <form class="d-flex px-3 px-md-0">
                         <input type="text" class="form-control me-2" placeholder="Email của bạn" />
                         <button class="btn btn-main" type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
@@ -582,7 +618,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

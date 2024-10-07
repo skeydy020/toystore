@@ -49,6 +49,11 @@ a {
     text-transform: capitalize;
 }
 
+.btn-custom {
+    border: none;
+    background-color: transparent;
+}
+
 .btn-main-hover:hover {
     color: #fff;
     opacity: 0.8!important;
@@ -183,6 +188,21 @@ a:hover {
 .border-main {
     border-color: var(--main-color)!important;
 }
+
+li {
+    list-style-type: none!important;
+}
+
+.bg-light-gray {
+    background-color: #e6e6e6;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+
+
 
 
 

@@ -17,17 +17,87 @@
 </head>
 
 <body>
-    <div class="container py-5">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <img class="img-fluid" src="https://www.mykingdom.com.vn/cdn/shop/files/71806_4bd05f3b-92a3-4f59-9596-fc0d990b708b.jpg?v=1725524372&width=990" alt="">
+    <header class="bg-main text-main py-2">
+        <div class="container d-flex justify-content-between align-items-center my-2">
+            <!-- Logo -->
+            <a href="./index.html">
+                <img class="img-fluid py-md-4 w-md-75 py-3 w-50" src="../assets/img/logo.png" alt="">
+            </a>
+
+            <!-- Search Form (hidden on mobile) -->
+            <form class="d-none d-md-flex flex-fill me-5">
+                <input class="form-control mx-2 search-bar py-2 px-4 fs-5 fs-md-6" type="search"
+                    placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
+                <button class="btn text-white btn-main"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <!-- Account and Cart (Icons only on mobile) -->
+            <div class="d-flex">
+                <a href="#" class="text-white btn btn-main me-2 fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6  fa-solid fa-user"></i>
+                    <span class="d-none d-md-inline ms-2">Tài khoản</span>
+                </a>
+                <a href="./cart.html" class="text-white btn btn-main fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6 fa-solid fa-cart-shopping"></i>
+                    <span class="d-none d-md-inline ms-2 ">Giỏ hàng</span>
+                </a>
             </div>
-            <div class="col">
+        </div>
+
+        <!-- Mobile Search Form (visible on mobile) -->
+        <form class="d-flex d-md-none px-3 mb-3 align-items-center">
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="btn btn-main d-md-none me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fs-2 fa-solid fa-bars"></i>
+            </button>
+            <input class="form-control me-2 search-bar py-3 fs-5" type="search"
+                placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
+            <button class="btn text-white btn-main"><i class="fs-3 fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Nav (Desktop and Mobile) -->
+        <nav class="border-top pt-3">
+            <!-- Desktop Menu -->
+            <ul class="nav container d-none d-md-flex justify-content-between align-items-center">
+                <li class="nav-item h5 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a></li>
+            </ul>
+
+            <!-- Mobile Menu (Collapsible) -->
+            <div class="collapse d-md-none" id="mobileMenu">
+                <ul class="nav flex-column text-center">
+                    <li class="nav-item h4 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container py-5">
+        <div class="row row-cols-1">
+            <div class="col-md-7">
+                <img class="img-fluid"
+                    src="https://www.mykingdom.com.vn/cdn/shop/files/71806_4bd05f3b-92a3-4f59-9596-fc0d990b708b.jpg?v=1725524372&width=990"
+                    alt="">
+            </div>
+            <div class="col-md-5">
                 <h4>Đồ chơi lắp ráp Chiến giáp của Cole LEGO NINJAGO 71806</h4>
 
                 <div class="d-flex pt-4">
                     <p class="me-3">Thương hiệu</p>
-                    <a class="text-primary text-decoration-underline flex-fill" href="">LEGO</a>
+                    <div class=" flex-fill"><a class="text-primary text-decoration-underline" href="">LEGO</a></div>
                     <p class="id align-self-end">SKU71806</p>
                 </div>
                 <div class="prices d-flex align-items-center pb-4">
@@ -39,13 +109,115 @@
                     <span class="discount-badge-inline">-20%</span>
                 </div>
                 <div class="">
-                    <li class="py-2">Hàng chính hãng</li>
-                    <li class="py-2">Miễn phí giao hàng toàn quốc đơn trên 500k</li>
-                    <li class="py-2">Giao hàng hỏa tốc 4 tiếng</li>
+                    <li class="py-2 d-flex align-items-center"><i class="fa-solid fa-check me-3 fs-5"></i><span
+                            class="fs-6">Hàng chính hãng</span></li>
+                    <li class="py-2 d-flex align-items-center"><i class="fa-solid fa-check me-3 fs-5"></i><span
+                            class="fs-6">Miễn phí giao hàng toàn quốc đơn trên 500k</span></li>
+                    <li class="py-2 d-flex align-items-center"><i class="fa-solid fa-check me-3 fs-5"></i><span
+                            class="fs-6">Giao hàng hỏa tốc 4 tiếng</span></li>
+                </div>
+                <div class="quantity">
+                    <h5 class="py-4">Số lượng</h5>
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center bg-light-gray rounded me-5">
+                            <button class="btn-custom px-4 decrement fs-3" type="button">-</button>
+                            <span class="mx-2 quantityDisplay fs-6 px-4">1</span>
+                            <button class="btn-custom px-4 increment fs-3" type="button">+</button>
+                        </div>
+                        <a href="#"
+                            class="d-flex align-self-center justify-content-center btn btn-main-hover add-to-cart-btn capitalize flex-fill fs-6 py-2">
+                            Thêm vào giỏ hàng
+                        </a>
+                    </div>
+                </div>
+                <div class="infor mt-5">
+                    <h5 class="mb-4">Thông tin sản phẩm</h5>
+                    <div class="item row mb-3">
+                        <div class="col title">Xuất xứ</div>
+                        <div class="col content">Trung Quốc</div>
+                    </div>
+                    <div class="item row mb-3">
+                        <div class="col title">Mã SP</div>
+                        <div class="col content">SKU71806</div>
+                    </div>
+                    <div class="item row mb-3">
+                        <div class="col title">Độ tuổi</div>
+                        <div class="col content">6 tuổi trở lên</div>
+                    </div>
+                    <div class="item row mb-3">
+                        <div class="col title">Thương hiệu</div>
+                        <div class="col content">LEGO</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-full">
+                <h4 class="my-3">Mô tả sản phẩm</h4>
+                <h5>Đồ Chơi Lắp Ráp Chiến Giáp Của Cole LEGO NINJAGO 71806 (235 chi tiết)</h5>
+                <div class="desc text-justify mt-3">
+                    Siêu chiến giáp của Cole có buồng lái và được trang bị một cây búa để chiến đấu với những tên Chiến binh Sói gian ác. Và bây giờ, bạn có thể kết hợp các bộ phận của 3 cỗ máy ninja tuyệt vời do Cole, Sora và Kai điều khiển để tạo ra cỗ máy kết hợp của riêng bạn. Mỗi cỗ máy có thể tùy chỉnh và được bán riêng, đi kèm với chân, tay, vũ khí và thân có thể tháo rời để bạn có thể kết hợp.
+
+                    • Xây dựng những bộ chiến giáp của riêng bạn – Những bé hâm mộ NINJAGO® có thể tận hưởng hàng giờ vui vẻ sáng tạo khi kết hợp các bộ phận từ những bộ đồ chơi khác nhau (được bán riêng) để tạo ra những bộ siêu chiến giáp NINJAGO® của riêng mình
+
+                    • 2 nhân vật NINJAGO® – Bộ trò chơi bao gồm Cole với phụ kiện thanh kiếm mini và Chiến binh Sói gian ác cũng có thanh kiếm. Bé có thể tái hiện các trận chiến từ phần 2 của bộ phim hoạt hình NINJAGO Dragons Rising
+
+                    • Chiến giáp có thể điều chỉnh được – chiến giáp hạng nặng này có buồng lái để bé có thể đặt Cole vào, một chiếc búa lớn và tay chân có thể điều chỉnh được, có thể nghiêng và điều chỉnh thành các tư thế chiến đấu. Ngoài ra bé có thể hoán đổi và kết hợp các bộ phận từ chiến giáp của Cole với chiến giáp công nghệ của Sora (71807) và chiến giáp Kai (71808) được bán riêng
+
+                    • Quà tặng siêu hấp dẫn cho bé – Bộ LEGO® NINJAGO siêu đỉnh này sẽ mang đến cho bé nghiệm lắp ráp và vui chơi sáng tạo. Qúa thích hợp làm quà tặng cho những dịp sinh nhật hoặc lễ Tết.
+
+                    • Xây dựng thế giới LEGO® NINJAGO® của bé – Cùng sưu tập thêm những bộ trò chơi LEGO® NINJAGO® khác và xây dựng một thế giới của riêng bé, từ đó mở ra những câu chuyện mới
+
+                    • Kích thước – Bộ lắp ráp LEGO® gồm 235 mảnh, sau khi hoàn thiện cao trên 5,5 inch (14 cm)
                 </div>
             </div>
         </div>
     </div>
+    <footer class="border-top border-5 border-main mt-5 bg-second ">
+        <div class="container py-3 py-md-5 mt-3 mt-md-5">
+            <div class="row row-cols-1 row-cols-md-4 text-center text-md-start">
+                <div class="col">
+                    <img class="img-fluid w-50 w-md-75 mx-auto" src="../assets/img/logo.png" alt="logo">
+                    <p class="mt-3 fs-5">Theo dõi chúng tôi trên</p>
+                    <ul class="list-unstyled mt-3 d-flex justify-content-center justify-content-md-start">
+                        <li class=""><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-facebook-f"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-twitter"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-pinterest"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-instagram"></i></a></li>
+                        <li class="ms-3"><a href="#" class=""><i class="fs-4 fs-md-5 fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3 class="text-main">Điều hướng</h3>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="./index.html">Trang chủ</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Sản phẩm</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Khuyến mãi</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Thành viên</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Cẩm nang</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3 class="text-main">Hỗ trợ</h3>
+                    <ul class="list-unstyled mt-2">
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách bảo mật</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Bảo hành đổi trả hàng</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Chính sách thanh toán</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Câu hỏi thường gặp</a></li>
+                        <li class="my-2"><a class="fs-6" href="#">Điều khoản điều kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-main">Đăng ký</h3>
+                    <p class="mt-2 fs-6">Đăng ký để nhận thông tin khuyến mãi mới nhất</p>
+                    <form class="d-flex px-3 px-md-0">
+                        <input type="text" class="form-control me-2" placeholder="Email của bạn" />
+                        <button class="btn btn-main" type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

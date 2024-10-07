@@ -37,3 +37,12 @@ function calculateTotal(button) {
     
     card.querySelector('.total-price').textContent = total.toLocaleString() + " Đ";
 }
+
+function changeImage(element) {
+    // Get the image element inside the button
+    var imgElement = element.querySelector('img');
+    // Get the main image element
+    var mainImage = document.getElementById('mainImage');
+    // Update the main image source with the selected preview image source
+    mainImage.src = imgElement.src;
+}

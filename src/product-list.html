@@ -4,162 +4,307 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/product-list.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sản phẩm</title>
 </head>
 <body>
-    <div class="container">
+    <header class="bg-main text-main py-2">
+        <div class="container d-flex justify-content-between align-items-center my-2">
+            <!-- Logo -->
+            <a href="./index.html">
+                <img class="img-fluid py-md-4 w-md-75 py-3 w-50" src="../assets/img/logo.png" alt="">
+            </a>
+
+            <!-- Search Form (hidden on mobile) -->
+            <form class="d-none d-md-flex flex-fill me-5">
+                <input class="form-control mx-2 search-bar py-2 px-4 fs-5 fs-md-6" type="search"
+                    placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
+                <button class="btn text-white btn-main"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <!-- Account and Cart (Icons only on mobile) -->
+            <div class="d-flex">
+                <a href="#" class="text-white btn btn-main me-2 fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6  fa-solid fa-user"></i>
+                    <span class="d-none d-md-inline ms-2">Tài khoản</span>
+                </a>
+                <a href="./cart.html" class="text-white btn btn-main fs-5 fs-md-6">
+                    <i class="fs-5 fs-md-6 fa-solid fa-cart-shopping"></i>
+                    <span class="d-none d-md-inline ms-2 ">Giỏ hàng</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Search Form (visible on mobile) -->
+        <form class="d-flex d-md-none px-3 mb-3 align-items-center">
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button class="btn btn-main d-md-none me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fs-2 fa-solid fa-bars"></i>
+            </button>
+            <input class="form-control me-2 search-bar py-3 fs-5" type="search"
+                placeholder="Tìm kiếm hơn 10000 sản phẩm đồ chơi..." aria-label="Search">
+            <button class="btn text-white btn-main"><i class="fs-3 fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <!-- Nav (Desktop and Mobile) -->
+        <nav class="border-top pt-3">
+            <!-- Desktop Menu -->
+            <ul class="nav container d-none d-md-flex justify-content-between align-items-center">
+                <li class="nav-item h5 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a></li>
+                <li class="nav-item h5 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a></li>
+            </ul>
+
+            <!-- Mobile Menu (Collapsible) -->
+            <div class="collapse d-md-none" id="mobileMenu">
+                <ul class="nav flex-column text-center">
+                    <li class="nav-item h4 fw-bolder"><a href="./index.html" class="nav-link text-white capitalize">Trang chủ</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="./product-list.html" class="nav-link text-white capitalize">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Khuyến mại</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Thương hiệu</a>
+                    </li>
+                    <li class="nav-item h4 fw-bolder"><a href="#" class="nav-link text-white capitalize">Cẩm nang</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container py-5">
         <div class="row">
-            <div class="col">
+            <div class="col-md-3">
                 <div class="card mb-3">
                     <div class="card-body">
                         <input type="text" placeholder="Tìm kiếm" class="form-control" />
                     </div>
                 </div>
-        
+                <!-- Category -->
                 <div class="card mb-3">
-                    <div class="card-header">
+                    <div class="card-header fs-6">
                         Danh mục
                     </div>
                     <div class="card-body">
                         <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link active"><i class="fa fa-angle-right"></i> Siêu anh hùng</a>
-                                <ul class="nav flex-column ms-3">
-                                    <li class="nav-item"><a href="#" class="nav-link active">- Anime</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">- Marvel</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Bags & Purses</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Beauty</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Coat & Jacket</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Jeans</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Jewellery</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Electronics</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Sports</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Technology</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Watches</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-angle-right"></i> Accessories</a></li>
+                            <li class="py-1"><a href="#" class="list-item active"></i>Siêu anh hùng</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Đồ chơi lắp ghép</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Đồ chơi sáng tạo</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Đồ chơi thời trang</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Thế giới động vật</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Búp bê</a></li>
+                            <li class="py-1"><a href="#" class="list-item"></i>Đồ chơi mô phỏng</a></li>
                         </ul>
                     </div>
                 </div>
-        
+                <!-- Price -->
                 <div class="card mb-3">
-                    <div class="card-header">
-                        Price Range
+                    <div class="card-header fs-6">
+                        Giá
                     </div>
                     <div class="card-body">
-                        <div id="slider-range" class="slider"></div>
-                        <div class="slider-info">
-                            <span id="slider-range-amount"></span>
-                        </div>
+                        <ul class="list-unstyled">
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">Dưới 200.000 Đ</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">200.000 Đ - 500.000 Đ</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">500.000 Đ - 1.000.000 Đ</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">1.000.000 - 2.000.000 Đ</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">Trên 2.000.000 Đ</span></li>
+                        </ul>
                     </div>
                 </div>
-        
+                <!-- Filter -->
                 <div class="card mb-3">
-                    <div class="card-header">
-                        Filter
+                    <div class="card-header fs-6">
+                        Lọc
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
-                                <label>Brand</label>
-                                <select class="form-select">
-                                    <option>Wallmart</option>
-                                    <option>Catseye</option>
-                                    <option>Moonsoon</option>
-                                    <option>Textmart</option>
+                                <label for="brandSelect">Giới tính</label>
+                                <select id="brandSelect" class="form-select">
+                                    <option>Nam</option>
+                                    <option>Nữ</option>
+                                    <option>Unisex</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label>Color</label>
-                                <select class="form-select">
-                                    <option>White</option>
-                                    <option>Black</option>
-                                    <option>Red</option>
-                                    <option>Green</option>
+                                <label for="colorSelect">Tuổi</label>
+                                <select id="colorSelect" class="form-select">
+                                    <option>12 tuổi trở lên</option>
+                                    <option>6 - 12 tuổi</option>
+                                    <option>1 - 3 tuổi</option>
+                                    <option>0 - 12 tháng</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
-                                <label>Type</label>
-                                <select class="form-select">
-                                    <option>Small</option>
-                                    <option>Medium</option>
-                                    <option>Large</option>
-                                    <option>Extra Large</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Filter</button>
+                            <button class="btn btn-main-hover float-end" type="submit">Tìm kiếm</button>
                         </form>
                     </div>
                 </div>
-        
+                <!-- Brand -->
                 <div class="card mb-3">
-                    <div class="card-header">
-                        Best Seller
+                    <div class="card-header fs-6">
+                        Thương hiệu
                     </div>
                     <div class="card-body">
-                        <div class="best-seller">
-                            <article class="d-flex mb-3">
-                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" class="img-fluid" alt="Item One" /></a>
-                                <div>
-                                    <a href="#" class="fw-bold">Item One Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="d-flex mb-3">
-                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/A2BE2/000000" class="img-fluid" alt="Item Two" /></a>
-                                <div>
-                                    <a href="#" class="fw-bold">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="d-flex mb-3">
-                                <a class="me-3" href="#"><img src="https://www.bootdey.com/image/250x220/6495ED/000000" class="img-fluid" alt="Item Three" /></a>
-                                <div>
-                                    <a href="#" class="fw-bold">Item Three Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                        </div>
+                        <ul class="list-unstyled">
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">LEGO</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">GUNDAM</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">MINIONS</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">VECTO</span></li>
+                            <li class="py-1"><input type="checkbox"><span class="ms-2">POKEMONTOYS</span></li>
+                        </ul>
                     </div>
                 </div>
+    
             </div>
         
-            <div class="col">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-end">
-                            <ul class="pagination pagination-sm">
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">»</a></li>
-                            </ul>
-                        </div>
+            <div class="col-md-9">
+                <div class="row row-cols-2 row-cols-md-3 g-4">
+                    <div class="col">
+                        <a href="./single-product.html">
+                            <div class="card h-100">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-xe-canh-sat-tu-dong-vecto-vt9033ck_1.jpg?v=1725424811&width=500"
+                                    class="card-img-top" alt="Toy 1">
+                                <span class="discount-badge">-20%</span>
+                                <div class="card-body">
+                                    <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                    <div class="price mb-2 mt-3 text-start">
+                                        <span class="price-regular">249.000 Đ</span>
+                                        <span class="price-onsale fs-5">187.000 Đ</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                            giỏ hàng</a>
+                                        <button class="btn btn-favorite"><i
+                                                class="fa-regular fa-heart text-main fs-3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="./single-product.html">
+                            <div class="card h-100">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-xe-canh-sat-tu-dong-vecto-vt9033ck_1.jpg?v=1725424811&width=500"
+                                    class="card-img-top" alt="Toy 1">
+                                <span class="discount-badge">-20%</span>
+                                <div class="card-body">
+                                    <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                    <div class="price mb-2 mt-3 text-start">
+                                        <span class="price-regular">249.000 Đ</span>
+                                        <span class="price-onsale fs-5">187.000 Đ</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                            giỏ hàng</a>
+                                        <button class="btn btn-favorite"><i
+                                                class="fa-regular fa-heart text-main fs-3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="./single-product.html">
+                            <div class="card h-100">
+                                <img src="https://www.mykingdom.com.vn/cdn/shop/files/10280_6f82d206-8386-47ba-b499-310819e0f918.jpg?v=1725527326&width=500"
+                                    class="card-img-top" alt="Toy 1">
+                                <span class="discount-badge">-20%</span>
+                                <div class="card-body">
+                                    <h5 class="card-title two-line-text-overflow">Trứng Slime sưu tập ấp nở khủng long
+                                        JurassicWorld Hatchling TOY MONSTER JW-HC-14CDU</h5>
+                                    <div class="price mb-2 mt-3 text-start">
+                                        <span class="price-regular">249.000 Đ</span>
+                                        <span class="price-onsale fs-5">187.000 Đ</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <a href="./cart.html"
+                                            class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                            giỏ hàng</a>
+                                        <button class="btn btn-favorite"><i
+                                                class="fa-regular fa-heart text-main fs-3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="./single-product.html">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Toy 1">
+                                <span class="discount-badge">-20%</span>
+                                <div class="card-body">
+                                    <h5 class="card-title two-line-text-overflow">Đồ chơi trạm cảnh sát - bao gồm 4 xe</h5>
+                                    <div class="price mb-2 mt-3 text-start">
+                                        <span class="price-regular">249.000 Đ</span>
+                                        <span class="price-onsale fs-5">187.000 Đ</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <a href="#" class="btn btn-main-hover add-to-cart-btn capitalize flex-fill">Thêm vào
+                                            giỏ hàng</a>
+                                        <button class="btn btn-favorite"><i
+                                                class="fa-regular fa-heart text-main fs-3"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-        
-                <div class="row product-list">
-                    <!-- Repeat this block for each product -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <div class="pro-img-box position-relative">
-                                <img src="https://www.bootdey.com/image/250x220/FFB6C1/000000" class="card-img-top" alt="" />
-                                <a href="#" class="position-absolute top-0 end-0 m-2"><i class="fa fa-shopping-cart"></i></a>
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title"><a href="#" class="text-decoration-none">Leopard Shirt Dress</a></h5>
-                                <p class="price">$300.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repeat for more products... -->
-                </div>
+                <ul class="pagination mt-5 d-flex align-items-center justify-content-center">
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class=""><i class="fa-solid fa-chevron-left"></i></span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5 active">
+                            <span class="">1</span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class="">2</span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class="">3</span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class="">4</span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class="">...</span>
+                        </a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="" class="pagination-link px-4 py-2 fw-bold mx-3 fs-5">
+                            <span class=""><i class="fa-solid fa-chevron-right"></i></span>
+                        </a>
+                    </li>
+                </ul>   
             </div>
         </div>
 
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="./script.js"></script>
 </body>
 </html>

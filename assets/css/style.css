@@ -21,6 +21,20 @@ a {
     text-decoration: none!important;
 }
 
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+
 .btn {
     transition: all .1s ease-in;
 }
@@ -205,6 +219,12 @@ li {
     border:none;
 }
 
+.required::after {
+    content: '*';
+    color: red;
+    position: relative;
+    left: 2px;
+}
 
 
 

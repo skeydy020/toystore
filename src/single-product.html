@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <header class="bg-main text-main py-2">
+    <header class="bg-main text-main py-1">
         <div class="container d-flex justify-content-between align-items-center my-2">
             <!-- Logo -->
             <a href="./index.html">
-                <img class="img-fluid py-md-4 w-md-75 py-3 w-50" src="../assets/img/logo.png" alt="">
+                <img class="img-fluid py-md-2 w-md-75 w-50" src="../assets/img/logo.png" alt="">
             </a>
 
             <!-- Search Form (hidden on mobile) -->
@@ -33,7 +33,7 @@
 
             <!-- Account and Cart (Icons only on mobile) -->
             <div class="d-flex">
-                <a href="#" class="text-white btn btn-main me-2 fs-5 fs-md-6">
+                <a href="./login.html" class="text-white btn btn-main me-2 fs-5 fs-md-6">
                     <i class="fs-5 fs-md-6  fa-solid fa-user"></i>
                     <span class="d-none d-md-inline ms-2">Tài khoản</span>
                 </a>
@@ -90,6 +90,7 @@
             <div class="col-md-7">
                 <div class="main-image">
                     <img class="img-fluid" id="mainImage" src="https://www.mykingdom.com.vn/cdn/shop/products/71806_1.jpg?v=1725524380&width=990" alt="Main Product Image">
+                    <div id="magnifier"></div>
                 </div>
                 <div class="row preview-images ">
                     <button class="col img-btn shadow p-3 mb-5 bg-body rounded mx-2" onclick="changeImage(this)"><img class="img-fluid" src="https://www.mykingdom.com.vn/cdn/shop/products/71806_1.jpg?v=1725524380&width=990" alt=""></button>
@@ -177,7 +178,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Related products section -->
     <section class="py-md-4 py-2">
         <div class="container position-relative mt-md-5 mt-5">
             <div class="b-md-5 mb-5">

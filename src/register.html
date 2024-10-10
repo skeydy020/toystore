@@ -90,23 +90,39 @@
     <!-- Login section -->
     <section>
         <div class="container py-5 mt-5">
-            <h1 class="text-center text-second">Đăng nhập</h1>
-            <form class="mt-4 w-35 mx-auto">
+            <h1 class="text-center text-second">Đăng ký</h1>
+            <form class="mt-4 w-50 mx-auto">
                 <div class="mb-4">
-                    <label for="email" class="form-label required fw-600">Email</label>
-                    <input type="email" class="form-control border-2" id="email"
+                    <label for="name" class="form-label required fw-600">Họ và tên</label>
+                    <input type="text" class="form-control border-2" id="name"
                         aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="form-label required fw-600">Mật khẩu</label>
-                    <input type="password" class="form-control border-2" id="password" required>
+                    <label for="tel" class="form-label required fw-600">Số điện thoại</label>
+                    <input type="tel" class="form-control border-2" id="tel" required>
                 </div>
-                <button type="submit" class="btn btn-main-hover d-block mx-auto px-3">Đăng nhập</button>
-                <a class="d-flex justify-content-center mt-3 text-decoration-underline text-second fw-500" href="">Quên mật khẩu?</a>
-                <div class="mt-4 text-center">
-                    <span>Chưa có tài khoản?</span>
-                    <a class="text-decoration-underline text-main fw-600" href="./register.html">Đăng ký tài khoản</a>
+                <div class="mb-4">
+                    <label for="email" class="form-label required fw-600">Email</label>
+                    <input type="email" class="form-control border-2" id="email" required>
                 </div>
+                <div class="row row-cols-2 mb-4">
+                    <div class="col">
+                        <label for="password" class="form-label required fw-600">Mật khẩu</label>
+                        <input type="password" class="form-control border-2" id="password" required>
+                    </div>
+                    <div class="col">
+                        <label for="confirm-password" class="form-label required fw-600">Nhập lại mật khẩu</label>
+                        <input type="password" class="form-control border-2" id="confirm-password" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input border-1" type="checkbox" value="" id="" />
+                        <label class="form-check-label fs-6" for=""> Tôi đã đọc và đồng ý với <a class="text-second" href="">Điều khoản sử dụng và chính sách của ToyStore</a> </label>
+                    </div>
+                    
+                </div>
+                <button type="submit" class="btn btn-main-hover d-block mx-auto px-4">Đăng ký</button>
             </form>
         </div>
     </section>

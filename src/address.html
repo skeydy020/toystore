@@ -87,27 +87,36 @@
         </nav>
     </header>
 
-    <!-- Login section -->
+    <!-- Body section -->
     <section>
-        <div class="container py-5 mt-5">
-            <h1 class="text-center text-second">Đăng nhập</h1>
-            <form class="mt-4 w-35 mx-auto">
-                <div class="mb-4">
-                    <label for="email" class="form-label required fw-600">Email</label>
-                    <input type="email" class="form-control border-2" id="email"
-                        aria-describedby="emailHelp" required>
+        <div class="container py-5">
+            <h1 class="text-second text-center capitalize">Tài khoản của bạn</h1>
+            <div class="row row-cols-2 mt-5">
+                <div class="col-md-3 side-bar-box p-0 mx-4">
+                    <h5 class="bg-main side-bar-heading py-3 text-center">Tài khoản của bạn</h5>
+                    <ul class="p-3 m-0">
+                        <li class=" mb-3 "><a class="px-3 py-2 d-block fw-500 side-bar-item rounded-3 " href="./account.html">Tài khoản</a></li>
+                        <li class=" mb-3 "><a class="px-3 py-2 d-block fw-500 side-bar-item rounded-3" href="./address.html">Địa chỉ giao hàng</a></li>
+                        <li class=" mb-3 "><a class="px-3 py-2 d-block fw-500 side-bar-item rounded-3" href="">Lịch sử mua hàng</a></li>
+                        <li class=""><a class="px-3 py-2 d-block fw-500 side-bar-item rounded-3" href="">Đăng xuất</a></li>
+                    </ul>
                 </div>
-                <div class="mb-5">
-                    <label for="password" class="form-label required fw-600">Mật khẩu</label>
-                    <input type="password" class="form-control border-2" id="password" required>
+                <div class="col-md-8 py-4 px-4 border box-rounded">
+                    <h6 class="text-second fw-600 mb-4 capitalize">Thông tin tài khoản</h6>
+                    <div class="name-box mb-4">
+                        <span class="d-block">Họ và tên</span>
+                        <span class="d-block fw-500">Dinh Manh</span>
+                    </div>
+                    <div class="name-box mb-4">
+                        <span class="d-block">Số điện thoại</span>
+                        <span class="d-block fw-500">+8477764971</span>
+                    </div>
+                    <div class="name-box">
+                        <span class="d-block">Email</span>
+                        <span class="d-block fw-500">skeydy2002@gmail.com</span>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-main-hover d-block mx-auto px-3">Đăng nhập</button>
-                <a class="d-flex justify-content-center mt-3 text-decoration-underline text-second fw-500" href="">Quên mật khẩu?</a>
-                <div class="mt-4 text-center">
-                    <span>Chưa có tài khoản?</span>
-                    <a class="text-decoration-underline text-main fw-600" href="./register.html">Đăng ký tài khoản</a>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
 

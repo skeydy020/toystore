@@ -271,12 +271,24 @@ li {
 .side-bar-item.active {
     cursor: pointer;
     background-color: #fff;
+    color: var(--main-color);
 }
 
 .box-rounded {
     border-radius: 20px;
 }
 
+.box-content {
+    display: none!important;
+}
+
+.box-content.active {
+    display: block!important;
+}
+
+.modal {
+    
+}
 
 
 

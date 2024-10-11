@@ -37,53 +37,81 @@ function calculateTotal(button) {
 
     card.querySelector('.total-price').textContent = total.toLocaleString() + " Đ";
 }
-// Thay doi hinh anh hien thi san pham
-function changeImage(element) {
-    // Get the image element inside the button
-    var imgElement = element.querySelector('img');
-    // Get the main image element
-    var mainImage = document.getElementById('mainImage');
-    // Update the main image source with the selected preview image source
-    mainImage.src = imgElement.src;
-}
-// Magnify anh san pham
-window.onload = function () {
-    const magnifier = document.getElementById('magnifier');
-    const img = document.getElementById('mainImage');
 
-    img.addEventListener('mousemove', function (event) {
-        magnifier.style.display = "block";
 
-        let pos = getCursorPos(event);
-        let x = pos.x;
-        let y = pos.y;
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
-        // Move magnifier
-        magnifier.style.left = x - magnifier.offsetWidth / 2 + 'px';
-        magnifier.style.top = y - magnifier.offsetHeight / 2 + 'px';
+const tabs = $$('.side-bar-item');
+const panes = $$('.box-content');
 
-        // Set the zoomed background of the magnifier
-        magnifier.style.backgroundImage = `url(${img.src})`;
+tabs.forEach((tab, index) => {
+    const pane = panes[index];
+    
+    tab.onclick = function(){
+        $('.side-bar-item.active').classList.remove('active');
+        $('.box-content.active').classList.remove('active');
 
-        let imgWidth = img.offsetWidth;
-        let imgHeight = img.offsetHeight;
-
-        // Increase the size of the background for the zoom effect
-        magnifier.style.backgroundSize = `${imgWidth * 2}px ${imgHeight * 2}px`;
-
-        // Adjust the position of the zoomed background
-        magnifier.style.backgroundPosition = `-${x * 2 - magnifier.offsetWidth / 2}px -${y * 2 - magnifier.offsetHeight / 2}px`;
-    });
-
-    img.addEventListener('mouseleave', function () {
-        magnifier.style.display = "none";
-    });
-
-    // Function to get the cursor position relative to the image
-    function getCursorPos(event) {
-        let rect = img.getBoundingClientRect();
-        let x = event.clientX - rect.left;
-        let y = event.clientY - rect.top;
-        return { x: x, y: y };
+        this.classList.add('active');
+        pane.classList.add('active');
     }
+});
+
+// get location data
+var cities = document.getElementById("city");
+var districts = document.getElementById("district");
+var wards = document.getElementById("ward");
+
+var parameter = {
+  url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+  method: "GET",
+  responseType: "application/json"
+};
+
+// Use axios to fetch data
+axios(parameter)
+  .then(function (response) {
+    renderCity(response.data);
+  })
+  .catch(function (error) {
+    console.error("Error fetching data:", error);
+  });
+
+function renderCity(data) {
+  // Populate the city dropdown
+  data.forEach(function (city) {
+    cities.options[cities.options.length] = new Option(city.Name, city.Id);
+  });
+
+  // Handle city change event
+  cities.onchange = function () {
+    districts.length = 1;  // Reset districts dropdown
+    wards.length = 1;      // Reset wards dropdown
+
+    if (this.value !== "") {
+      const selectedCity = data.find(city => city.Id === this.value);
+      if (selectedCity) {
+        // Populate the districts dropdown
+        selectedCity.Districts.forEach(function (district) {
+          districts.options[districts.options.length] = new Option(district.Name, district.Id);
+        });
+      }
+    }
+  };
+
+  // Handle district change event
+  districts.onchange = function () {
+    wards.length = 1;  // Reset wards dropdown
+
+    const selectedCity = data.find(city => city.Id === cities.value);
+    if (selectedCity && this.value !== "") {
+      const selectedDistrict = selectedCity.Districts.find(district => district.Id === this.value);
+      if (selectedDistrict) {
+        // Populate the wards dropdown
+        selectedDistrict.Wards.forEach(function (ward) {
+          wards.options[wards.options.length] = new Option(ward.Name, ward.Id);
+        });
+      }
+    }
+  };
 }

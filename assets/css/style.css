@@ -159,6 +159,14 @@ a {
     text-overflow: ellipsis;        /* Add ellipsis at the end of overflowing text */
 }
 
+.one-line-text-overflow {
+    display: -webkit-box;           /* Necessary for line clamping */
+    -webkit-line-clamp: 1;          /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;   /* Specify vertical orientation */
+    overflow: hidden;               /* Hide any overflow text */
+    text-overflow: ellipsis;   
+}
+
 .card-text {
     display: -webkit-box;           /* Necessary for line clamping */
     -webkit-line-clamp: 3;          /* Limit text to 2 lines */
@@ -260,6 +268,8 @@ li {
 .side-bar-box {
     background-color: #F2F2F2;
     border-radius: 20px;
+    display: block!important;
+    height: 296px!important;
 }
 
 .side-bar-heading {

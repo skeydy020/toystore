@@ -1,11 +1,11 @@
-body{
-    margin-top:20px;
-    background-color: #f1f3f7;
-}
-
 .avatar-lg {
     height: 5rem;
     width: 5rem;
+}
+
+.avatar-md {
+    height: 3.5rem;
+    width: 3.5rem;
 }
 
 .font-size-18 {
